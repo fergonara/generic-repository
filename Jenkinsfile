@@ -33,13 +33,7 @@ pipeline {
           expression { params.STAGE == 'Build' || params.STAGE == 'Build+Docker' || params.STAGE == 'All'};
         }
       }
-      agent {
-        docker {
-          image 'node:12.22'
-          args '-u root:sudo -v /root/.m2:/root/.m2'
-          reuseNode true
-        }
-      }
+      agent { any }
       steps {
         echo "hello"
       }
