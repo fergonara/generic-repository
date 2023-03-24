@@ -5,7 +5,6 @@ pipeline {
     string(name: 'DESTENVIRONMENT', defaultValue: '', description: 'Destination environment for the deployment');
     string(name: 'VERSION', defaultValue: '', description: 'Version to copy inside the docker image');
   }
-  agent { label 'slave' }
   environment {
     // Jenkins Variables
     workspace="${WORKSPACE}"
