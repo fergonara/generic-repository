@@ -33,7 +33,7 @@ pipeline {
           expression { params.STAGE == 'Build' || params.STAGE == 'Build+Docker' || params.STAGE == 'All'};
         }
       }
-      agent { any }
+      agent any
       steps {
         echo "hello"
       }
